@@ -28,8 +28,6 @@
 
 #include "display.h"
 
-extern void (*_putchar)(int c);
-
 static char display_buf[11];
 
 void putchar_to_display(int c);
@@ -37,7 +35,6 @@ void putchar_to_display(int c);
 void init_display_putchar(void)
 {
     memset(display_buf, '\0', 11);
-    _putchar = putchar_to_display;
 }
 
 void putchar_to_display(int c)

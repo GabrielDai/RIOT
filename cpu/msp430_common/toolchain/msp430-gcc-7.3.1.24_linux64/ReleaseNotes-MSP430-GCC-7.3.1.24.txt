@@ -1,0 +1,20 @@
+MSP430-GCC 7.3.1.24 Release Notes
+---
+* Added GCC 7.3.1 patches.
+* Updated GDB to version 8.1 from 7.11, which has added new features and bug
+  fixes. Full list of changes added in GDB 7.12, 8.0 and 8.1 are available here:
+  https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=blob_plain;f=gdb/NEWS;hb=gdb-8.1-release
+* Added alternative methods for specifying the location of the MSP430 GCC
+  Support Files.
+  The path specified by the MSP430_GCC_INCLUDE_DIR environment variable, and the
+  "devices" directory in "$TOOLCHAIN_ROOT/msp430-elf/include/" are now also
+  searched for devices.csv, header files and linker scripts.
+* Interrupt functions can now be declared as static and will not be optimized
+  out.
+* MSP430-specific attributes can now be specified using "__ATTRIBUTENAME__" and
+  "ATTRIBUTENAME" syntax interchangeably. Previously, bogus warnings and
+  undesirable behaviour could occur when using the "__ATTRIBUTENAME__" syntax.
+* Added new warnings when the "noinit" and "persistent" attributes are
+  misused.
+* Fixed a segmentation fault occurring when using the binutils BFD library to
+  open a BFD for update.

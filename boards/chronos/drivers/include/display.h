@@ -42,6 +42,8 @@
 extern "C" {
 #endif
 
+#include <stdint.h>
+
 #define CLOCK_24HR              (0)
 #define CLOCK_AM_PM             (1)
 #define CLOCK_DISPLAY_SELECT    (2)

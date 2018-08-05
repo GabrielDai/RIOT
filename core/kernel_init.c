@@ -23,11 +23,11 @@
 #include <stdbool.h>
 #include <errno.h>
 #include "kernel_init.h"
-#include "thread.h"
 #include "irq.h"
 #include "log.h"
 
 #include "periph/pm.h"
+#include "thread.h"
 
 #ifdef MODULE_SCHEDSTATISTICS
 #include "sched.h"

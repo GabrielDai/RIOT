@@ -29,4 +29,5 @@ Vagrant.configure(2) do |config|
   end
 # use a custom provisioning script
 # config.vm.provision "shell", path: "dist/tools/vagrant/bootstrap.sh"
+  config.vm.provision "shell", path: "dist/tools/vagrant/msp430_dependencies.sh"
 end
