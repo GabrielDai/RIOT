@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
     # vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', '<custom_name>', '--vendorid', '<vID>', '--productid', '<pID>']
   end
 
-  config.vm.synced_folder RIOTBASE, "/home/vagrant/RIOT"
+  config.vm.synced_folder "..", "/home/vagrant/Smartccio"
 
   if File.exists?(File.join(Dir.home, ".gitconfig"))
     config.vm.provision "file", source: File.join(Dir.home, ".gitconfig"), destination: ".gitconfig"
