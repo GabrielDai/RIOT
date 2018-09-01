@@ -13,6 +13,8 @@
 extern "C" {
 #endif
 
+#include <cc430f6137.h>
+
 // Button ports
 #define BUTTON_STAR_PIN         (BIT2)
 #define BUTTON_NUM_PIN          (BIT1)
