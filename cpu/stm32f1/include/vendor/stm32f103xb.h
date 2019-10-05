@@ -2801,6 +2801,7 @@ typedef struct
 #define  TIM_CR2_OIS4                        ((uint32_t)0x00004000)            /*!<Output Idle state 4 (OC4 output) */
 
 /*******************  Bit definition for TIM_SMCR register  ******************/
+#define  TIM_SMCR_SMS_Pos                    ((uint32_t)0x00000000)
 #define  TIM_SMCR_SMS                        ((uint32_t)0x00000007)            /*!<SMS[2:0] bits (Slave mode selection) */
 #define  TIM_SMCR_SMS_0                      ((uint32_t)0x00000001)            /*!<Bit 0 */
 #define  TIM_SMCR_SMS_1                      ((uint32_t)0x00000002)            /*!<Bit 1 */
