@@ -90,26 +90,10 @@ static const timer_conf_t timer_config[] = {
         .rcc_mask = RCC_APB1ENR_TIM2EN,
         .bus      = APB1,
         .irqn     = TIM2_IRQn
-    },
-    {
-        .dev      = TIM3,
-        .max      = 0x0000ffff,
-        .rcc_mask = RCC_APB1ENR_TIM3EN,
-        .bus      = APB1,
-        .irqn     = TIM3_IRQn
-    },
-    {
-        .dev      = TIM4,
-        .max      = 0x0000ffff,
-        .rcc_mask = RCC_APB1ENR_TIM4EN,
-        .bus      = APB1,
-        .irqn     = TIM4_IRQn
     }
 };
 
 #define TIMER_0_ISR         isr_tim2
-#define TIMER_1_ISR         isr_tim3
-#define TIMER_2_ISR         isr_tim4
 
 #define TIMER_NUMOF         ARRAY_SIZE(timer_config)
 
@@ -129,15 +113,6 @@ static const qdec_conf_t qdec_config[] = {
         .irqn     = TIM1_UP_IRQn
     },
     {
-        .dev      = TIM2,
-        .max      = 0x0000ffff,
-        .rcc_mask = RCC_APB1ENR_TIM2EN,
-        .chan     = { { .pin = GPIO_PIN(PORT_A, 0),             .cc_chan = 0 },
-                      { .pin = GPIO_PIN(PORT_A, 1),             .cc_chan = 1 } },
-        .bus      = APB1,
-        .irqn     = TIM2_IRQn
-    },
-    {
         .dev      = TIM3,
         .max      = 0x0000ffff,
         .rcc_mask = RCC_APB1ENR_TIM3EN,
@@ -154,15 +129,12 @@ static const qdec_conf_t qdec_config[] = {
                       { .pin = GPIO_PIN(PORT_B, 7),             .cc_chan = 1 } },
         .bus      = APB1,
         .irqn     = TIM4_IRQn
-    },
+    }
 };
 
-/*
 #define QDEC_0_ISR         isr_tim1
-#define QDEC_1_ISR         isr_tim2
 #define QDEC_2_ISR         isr_tim3
 #define QDEC_3_ISR         isr_tim4
-*/
 
 #define QDEC_NUMOF           ARRAY_SIZE(qdec_config)
 
