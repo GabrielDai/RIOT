@@ -133,8 +133,8 @@ static const qdec_conf_t qdec_config[] = {
 };
 
 #define QDEC_0_ISR         isr_tim1
-#define QDEC_2_ISR         isr_tim3
-#define QDEC_3_ISR         isr_tim4
+#define QDEC_1_ISR         isr_tim3
+#define QDEC_2_ISR         isr_tim4
 
 #define QDEC_NUMOF           ARRAY_SIZE(qdec_config)
 
